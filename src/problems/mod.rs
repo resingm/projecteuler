@@ -3,3 +3,7 @@ pub mod problem_002;
 pub mod problem_003;
 pub mod problem_004;
 pub mod problem_005;
+pub mod problem_006;
+pub mod problem_007;
+pub mod problem_008;
+pub mod problem_009;

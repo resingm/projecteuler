@@ -18,6 +18,10 @@ fn main() {
         "3" => problems::problem_003::solve(),
         "4" => problems::problem_004::solve(),
         "5" => problems::problem_005::solve(),
+        "6" => problems::problem_006::solve(),
+        "7" => problems::problem_007::solve(),
+        "8" => problems::problem_008::solve(),
+        "9" => problems::problem_009::solve(),
         _ => eprintln!("Problem not implemented."),
     }
 }
