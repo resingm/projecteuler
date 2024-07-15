@@ -22,6 +22,8 @@ fn main() {
         "7" => problems::problem_007::solve(),
         "8" => problems::problem_008::solve(),
         "9" => problems::problem_009::solve(),
+        "10" => problems::problem_010::solve(),
+        "11" => problems::problem_011::solve(),
         _ => eprintln!("Problem not implemented."),
     }
 }
