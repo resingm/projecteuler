@@ -1,3 +1,5 @@
+use std::{cmp::max, fmt::format};
+
 const NUMBERS: &str = "
 37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538
@@ -104,12 +106,18 @@ const NUMBERS: &str = "
 pub fn solve() {
     let summands : Vec<String> = read_numbers();
 
-    let _sum = additon_string(&summands[0], &summands[1]);
-    println!("{}", _sum);
-    
+    let mut sum = String::from("");
 
-    // println!("Solution to problem 13:");
-    // println!("{:?}", summands);
+    // let _sum = additon_string(&summands[0], &summands[1]);
+
+    for e in summands {
+        sum = additon_string(&sum, &e)
+    }
+
+    // sum = sum[0:10];
+
+    println!("Solution to problem 13:");
+    println!("{}", &sum[..10]);
 }
 
 
@@ -122,7 +130,11 @@ fn read_numbers() -> Vec<String> {
 }
 
 fn additon_string(a: &str, b: &str) -> String {
-    // TODO: Implement string addition
+    let fill_a = max(a.len(), b.len()) - a.len();
+    let a = format!("{}{}", std::iter::repeat("0").take(fill_a).collect::<String>(), a);
+    let fill_b = max(a.len(), b.len()) - b.len();
+    let b = format!("{}{}", std::iter::repeat("0").take(fill_b).collect::<String>(), b);
+
     let a = a.chars()
         .map(|c| c.to_digit(10).unwrap())
         .rev();
