@@ -1,4 +1,4 @@
-use std::{cmp::max, fmt::format};
+use std::cmp::max;
 
 const NUMBERS: &str = "
 37107287533902102798797998220837590246510135740250

@@ -26,6 +26,7 @@ fn main() {
         "11" => problems::problem_011::solve(),
         "12" => problems::problem_012::solve(),
         "13" => problems::problem_013::solve(),
+        "14" => problems::problem_014::solve(),
         _ => eprintln!("Problem not implemented."),
     }
 }
